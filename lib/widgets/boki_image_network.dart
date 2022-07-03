@@ -23,10 +23,10 @@ class BokiImageNetwork extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _BokiImageNetworkState createState() => _BokiImageNetworkState();
+  BokiImageNetworkState createState() => BokiImageNetworkState();
 }
 
-class _BokiImageNetworkState extends State<BokiImageNetwork> {
+class BokiImageNetworkState extends State<BokiImageNetwork> {
   Uint8List _imgBytes = Uint8List(0);
   String _error = "";
   bool _loading = true;
@@ -44,11 +44,11 @@ class _BokiImageNetworkState extends State<BokiImageNetwork> {
       if (response.statusCode == 200) {
         _imgBytes = response.bodyBytes;
       } else {
-        _error = "Error : " + response.statusCode.toString();
+        _error = "Error : ${response.statusCode}";
       }
     } catch (e) {
       _error = e.toString();
-      log("Image error : " + e.toString());
+      log("Image error : $e");
     }
 
     if (mounted) {

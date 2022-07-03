@@ -22,10 +22,10 @@ class FormPhoto extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FormPhotoState createState() => _FormPhotoState();
+  FormPhotoState createState() => FormPhotoState();
 }
 
-class _FormPhotoState extends State<FormPhoto> {
+class FormPhotoState extends State<FormPhoto> {
   final ImagePicker _picker = ImagePicker();
   XFile? _image;
 

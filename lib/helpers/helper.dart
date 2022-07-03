@@ -24,9 +24,9 @@ class Helper {
 
     try {
       // Request API
-      log("POST  $url : \n" + postData.toString());
+      log("POST  $url : \n$postData");
       http.Response response = await http.post(Uri.parse(url), body: postData);
-      log("Response from $url : \n" + response.body);
+      log("Response from $url : \n${response.body}");
       out.responseBody = response.body;
       // log("Response received from $url");
 

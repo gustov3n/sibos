@@ -26,10 +26,10 @@ class FormDropdown extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FormDropdownState createState() => _FormDropdownState();
+  FormDropdownState createState() => FormDropdownState();
 }
 
-class _FormDropdownState extends State<FormDropdown> {
+class FormDropdownState extends State<FormDropdown> {
   bool _loading = false;
 
   void _showDialog() async {
@@ -174,10 +174,10 @@ class FormDropDownDialog extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FormDropDownDialogState createState() => _FormDropDownDialogState();
+  FormDropDownDialogState createState() => FormDropDownDialogState();
 }
 
-class _FormDropDownDialogState extends State<FormDropDownDialog> {
+class FormDropDownDialogState extends State<FormDropDownDialog> {
   final ScrollController _conList = ScrollController();
   int _page = 0;
   final int _limit = 10;

@@ -20,10 +20,10 @@ class FormTime extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FormTimeState createState() => _FormTimeState();
+  FormTimeState createState() => FormTimeState();
 }
 
-class _FormTimeState extends State<FormTime> {
+class FormTimeState extends State<FormTime> {
   TimeOfDay _newTime = TimeOfDay.now();
 
   void _showTimePicker() async {

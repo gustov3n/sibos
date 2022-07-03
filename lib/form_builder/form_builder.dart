@@ -34,10 +34,10 @@ class FormBuilder extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FormBuilderState createState() => _FormBuilderState();
+  FormBuilderState createState() => FormBuilderState();
 }
 
-class _FormBuilderState extends State<FormBuilder> {
+class FormBuilderState extends State<FormBuilder> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final Map<String, dynamic> _values = {};
   final List<Widget> _widgets = [];
@@ -315,10 +315,7 @@ class _FormBuilderState extends State<FormBuilder> {
       });
 
       // Send request
-      log("POST " +
-          (widget.actionUrl ?? "") +
-          " : \n" +
-          request.fields.toString());
+      log("POST ${widget.actionUrl ?? ""} : \n${request.fields}");
 
       if (widget.actionUrl == null) {
         if (mounted) {
@@ -335,10 +332,7 @@ class _FormBuilderState extends State<FormBuilder> {
           String response = await streamedResponse.stream.bytesToString();
 
           try {
-            log("Response from " +
-                (widget.actionUrl ?? "") +
-                " : \n" +
-                response);
+            log("Response from ${widget.actionUrl ?? ""} : \n$response");
             // log("Response received from $url");
 
             // Result

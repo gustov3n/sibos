@@ -20,10 +20,10 @@ class FormDate extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FormDateState createState() => _FormDateState();
+  FormDateState createState() => FormDateState();
 }
 
-class _FormDateState extends State<FormDate> {
+class FormDateState extends State<FormDate> {
   DateTime _newDate = DateTime.now();
 
   void _showDatePicker() async {

@@ -32,10 +32,10 @@ class FormText extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FormTextState createState() => _FormTextState();
+  FormTextState createState() => FormTextState();
 }
 
-class _FormTextState extends State<FormText> {
+class FormTextState extends State<FormText> {
   @override
   Widget build(BuildContext context) {
     return Padding(

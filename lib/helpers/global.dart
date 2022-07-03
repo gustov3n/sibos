@@ -4,8 +4,8 @@ const String host = "https://siroleg.boyolali.go.id";
 const String baseURL = "$host/AndroidAduan/";
 const String baseURLUploads = "$host/uploads/";
 
-const String appName = "Siroleg Aduan";
-const String appDescription = "Aplikasi Aduan Siroleg";
+const String appName = "SIBOS";
+const String appDescription = "Aplikasi Pencarian Bengkel";
 
 // Aduan
 const String urlLogin = "${baseURL}login";
